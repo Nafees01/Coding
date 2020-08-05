@@ -1,0 +1,135 @@
+2.(a)
+car and plane class can be implemented the Vehicle interface
+and override the corresponding methods like below:
+
+way:-1 ------------------>>
+
+class Car(val CarWheel:Int,val numOfPassanger:Int,val hasGas:Boolean) : Vehicle{
+
+override fun Int set_num_of_wheels(){
+return CarWheel
+}
+override fun Int set_num_of_passengers(){
+return numOfPassanger
+}
+override fun Boolean has_gas(){
+return hasGas
+}
+
+}
+
+class Plane(val wheel:Int,val numOfPassanger:Int,val hasGas:Boolean) : Vehicle{
+
+override fun Int set_num_of_wheels(){
+return wheel
+}
+override fun Int set_num_of_passengers(){
+return numOfPassanger
+}
+override fun Boolean has_gas(){
+return hasGas
+}
+
+}
+
+fun main(){
+
+val car:Car=Car(4,8,true)
+val plane:Plane=Plane(8,230,true)
+
+println("Number of Passenger in car is: ${car.set_num_of-wheels()}")
+
+}
+
+
+way:2 ------------------>>
+
+Another way of implementing the Vehicle interface is without passing values in  constructor. Using "getter" and "setter"
+i.e.
+
+[note: The naming convention of the methods of the given interface doesn't seem right.
+ The method name should be "get_num_of_wheels()" instead of "set_num_of_wheels()" because its "getter" method as it has return type.
+since the naming convention of the "getter" methods in the question is wrong ,so i'm also gonna name the "setter" method in wrong way in the below code.]  
+]  
+
+class Car:Vehicle{
+ var wheels : Int = 0
+ var numberOfPassenger : Int = 0 
+ var hasGas : Boolean = false
+
+//setter method for "wheels"
+fun get_num_of_wheels(wheels:Int ){  //as I said earlier in the above "note" that, the naming convention of the "getter" methods is wrong in the given interface.so i'm also write this "setter" method name in wrong way. 
+this.wheels=wheels                  // this method name should be "set_num_of_wheels()" 
+}
+
+//setter method for "passenger"
+fun get_num_of_passenger(numberOfPassenger:Int){ // this method name should be "set_num_of_passenger "
+this.numberOfPassenger=numberOfPassenger
+}
+
+//setter method for "gas"
+fun set_has_gas(hasGas:Boolean){ 
+this.hasGas=hasGas
+}
+
+//getter method for "wheels"
+override fun Int set_num_of_wheels(){  // this method name should be "get_num_of_wheels()" 
+return this.wheels                 
+}
+
+//getter method for "passenger"
+override fun Int set_num_of_passenger(numberOfPassenger:Int){ // this method name should be "get_num_of_passenger "
+this.numberOfPassenger=numberOfPassenger
+}
+
+//getter method for "gas"
+override fun has_gas(hasGas:Boolean){ 
+this.hasGas=hasGas
+}
+
+}
+
+
+
+class Plane:Vehicle{
+ var wheels : Int = 0
+ var numberOfPassenger : Int = 0 
+ var hasGas : Boolean = false
+
+//setter method for "wheels"
+fun get_num_of_wheels(wheels:Int ){  //as I said earlier in the above "note" that, the naming convention of the "getter" methods is wrong in the given interface.so i'm also write this "setter" method name in wrong way. 
+this.wheels=wheels                  // this method name should be "set_num_of_wheels()" 
+}
+
+//setter method for "passenger"
+fun get_num_of_passenger(numberOfPassenger:Int){ // this method name should be "set_num_of_passenger "
+this.numberOfPassenger=numberOfPassenger
+}
+
+//setter method for "gas"
+fun set_has_gas(hasGas:Boolean){ 
+this.hasGas=hasGas
+}
+
+//getter method for "wheels"
+override fun Int set_num_of_wheels(){  // this method name should be "get_num_of_wheels()" 
+return this.wheels                 
+}
+
+//getter method for "passenger"
+override fun Int set_num_of_passenger(numberOfPassenger:Int){ // this method name should be "get_num_of_passenger "
+this.numberOfPassenger=numberOfPassenger
+}
+
+//getter method for "gas"
+override fun has_gas(hasGas:Boolean){ 
+this.hasGas=hasGas
+}
+
+}
+
+fun main(){
+val car:Car=Car()
+car.get_num_of_passenger(8)
+println(set_num_of_passenger())
+}

@@ -1,0 +1,63 @@
+2(b):-
+
+Another design pattern is given below:
+
+abstract class Vehicle{
+abstract fun set_num_of_wheels(wheels:Int)
+abstract fun get_num_of_wheels():Int
+abstract fun set_num_of_passengers(passengers:Int)
+abstract fun get_num_of_passengers():Int
+abstract fun set_has_gas(hasGas:Boolean)
+abstract fun has_gas():Boolean
+
+
+}
+
+class BaseClass:Vehicle{
+
+var wheels:Int=0
+var passengers:Int=0
+var hasGas:Boolean=true
+
+override fun set_num_of_wheels(wheels:Int){
+   this.wheels=wheels
+}
+override fun get_num_of_wheels():Int= wheels
+override fun set_num_of_passengers(passengers:Int){
+   this.passengers=passengers
+}
+override fun set_num_of_passengers():Int=passengers
+   
+override fun set_has_gas(hasGas:Boolean){
+   this.hasGas=hasGas
+}
+override fun has_gas():Boolean=this.hasGas
+
+
+fun printSpecifiaction(name:String){
+
+System.out.println("$name has $wheels wheels, $passengers passengers)
+    
+}
+
+ } 
+
+
+fun main(){
+
+val car:BaseClass=BaseClass()
+
+car.set_num_of_wheels(4)
+car.set_num_of_passengers(6)
+car.set_has_gas(true)
+car.printSpecification("toyota car")
+
+val plane:BaseClass=BaseClass()
+
+plane.set_num_of_wheels(8)
+plane.set_num_of_passengers(230)
+plane.set_has_gas(true)
+plane.printSpecification("Bangladesh Biman")
+
+
+}

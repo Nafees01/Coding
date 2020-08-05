@@ -1,0 +1,31 @@
+3:-
+
+
+class Play{
+
+fun playInBackGround(){
+//it will be run in separate thread ,which will be running in background
+//it can done through background service too
+
+}
+
+fun playInForground(){
+//this method will be called when the app is in forground and user interacting with the app
+
+
+}
+
+
+fun forward(){
+//identified the thread and forward the current playing track (default forward timing is 10s)
+}
+
+fun rewind(){
+// after identified the running thread ..this method will destroy that thread and create a new one and will do the same task again
+
+}
+
+}
+
+
+
